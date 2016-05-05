@@ -1,0 +1,9 @@
+{
+  "firebase": "appinstallendpoint",
+  "public": "dist",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
