@@ -19,6 +19,8 @@ angular.module('appinstallendpointApp')
     $scope.views = $firebaseArray(Ref.child('views'));
     $scope.registrations = $firebaseArray(Ref.child('registrations'));
 
+    $scope.registrationDone = false;
+
     $scope.recordView = function(){
       $scope.views.$add({
         userAgent:navigator.userAgent,
@@ -49,6 +51,8 @@ angular.module('appinstallendpointApp')
         timeStamp:new Date().getTime()
       }).then(function(){
         console.log('Saved Email');
+        $scope.userEmail = '';
+        $scope.registrationDone = true;
       },function(error){
         console.log('Save Email Error', error);
       });
