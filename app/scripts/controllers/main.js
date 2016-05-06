@@ -20,6 +20,7 @@ angular.module('appinstallendpointApp')
     $scope.registrations = $firebaseArray(Ref.child('registrations'));
 
     $scope.registrationDone = false;
+    $scope.appRegistered = '';
 
     $scope.recordView = function(){
       $scope.views.$add({
@@ -52,6 +53,7 @@ angular.module('appinstallendpointApp')
       }).then(function(){
         console.log('Saved Email');
         $scope.userEmail = '';
+        $scope.appRegistered = appName;
         $scope.registrationDone = true;
       },function(error){
         console.log('Save Email Error', error);

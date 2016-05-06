@@ -7,6 +7,7 @@
 
 body {
   padding: 0;
+  font-family: Arial;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -101,17 +102,23 @@ body {
   margin-top: 2em;
 }
 .app-logo{
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 .app-title{
   text-align: center;
+  font-weight: bolder;
+}
+.app-subtitle{
+  text-align: center;
+  margin-top: -10px;
 }
 
 .badge-container{
   text-align: center;
   margin: 0 auto;
   padding: 0;
+  margin-top: 2em;
 }
 .badge-ios{
   display:inline-block;
@@ -120,6 +127,10 @@ body {
   width:165px;
   height:40px;
   background-size: contain;
+  background-position: center;
+}
+.badge-ios-disabled{
+  opacity: 0.5;
 }
 
 .badge-android{
@@ -130,4 +141,7 @@ body {
   background-position: center;
   width:165px;
   height:40px;
+}
+.full-width{
+  width: 100%;
 }
