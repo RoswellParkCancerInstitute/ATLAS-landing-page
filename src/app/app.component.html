@@ -1,0 +1,52 @@
+<img class="atlas-logo center-block" src="../assets/atlas-logo.png" />
+<md-card>
+  <md-card-title-group>
+    <img md-card-md-image src="../assets/bcg_icon.png" />
+    <md-card-title>BCG Treatment</md-card-title>
+    <md-card-subtitle>For Bladder Cancer Patients</md-card-subtitle>
+  </md-card-title-group>
+  <md-card-content>
+    <div class="badge-container">
+      <a href="https://play.google.com/store/apps/details?id=org.roswellpark.theatlasprogram.bcg" class="badge-android" (click)="recordClick('android','bcg')"></a>
+      <a href="https://geo.itunes.apple.com/us/app/bcg-treatment/id948407412?mt=8" class="badge-ios" (click)="recordClick('ios','bcg')"></a>
+    </div>
+  </md-card-content>
+</md-card>
+<md-card>
+  <md-card-title-group>
+    <img md-card-md-image src="../assets/pelvicrehab_icon.png" />
+    <md-card-title>Pelvic Rehab</md-card-title>
+    <md-card-subtitle>For Prostatectomy Patients</md-card-subtitle>
+  </md-card-title-group>
+  <md-card-content>
+    <div class="badge-container">
+      <a href="https://play.google.com/store/apps/details?id=org.roswellpark.theatlasprogram.pelvicrehab" class="badge-android"
+        (click)="recordClick('android','pelvicRehab')">
+      </a>
+      <a href="" class="badge-ios badge-ios-disabled" (click)="recordClick('ios','pelvicRehab')" disabled></a>
+      <p>The iOS app is currently under Beta testing.</p>
+      <p>Check back later or provide us with your email to request a beta test invite.</p>
+      <form #pelvicForm="ngForm" class="form" (ngSubmit)="registerEmail('pelvicRehab')">
+        <md-input type="email" class="form-control email" [(ngModel)]="email" name="email" placeholder="Email" required></md-input>
+        <button md-raised-button color="primary" type="submit" class="btn btn-default btn-block" [disabled]="!pelvicForm.form.valid">Register</button>
+        <br />
+        <br />
+        <div class="message-success" role="alert" *ngIf="registrationDone && appRegistered === 'pelvicRehab'">Email Registered !</div>
+      </form>
+    </div>
+  </md-card-content>
+</md-card>
+<md-card>
+  <md-card-title-group>
+    <img md-card-md-image src="../assets/pace_icon.png" />
+    <md-card-title>PACE</md-card-title>
+    <md-card-subtitle>Prostatectomy Assessment Competency Evaluation</md-card-subtitle>
+  </md-card-title-group>
+  <md-card-content>
+    <br />
+    <img class="app-logo center-block" src="../assets/pace_scoresheet.jpg" />
+    <a md-raised-button color="primary" href="../assets/pace_scoresheet.pdf" download="PACE_SCORESHEET.pdf" class="center-block"
+      (click)="recordClick('download','pace')">Download Score Sheet (PDF)</a>
+  </md-card-content>
+</md-card>
+<img class="rpci-logo center-block" src="../assets/rpci-logo.png" />

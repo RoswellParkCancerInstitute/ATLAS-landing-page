@@ -93,26 +93,12 @@ body {
   margin-bottom: 1em;
   width: 175px;
 }
-.form-inline .form-control{
-  width: 66.66% !important;
-}
 
-.app-logo-container{
-  width: 100%;
-  margin-top: 2em;
-}
 .app-logo{
   width: 100px;
   height: 100px;
 }
-.app-title{
-  text-align: center;
-  font-weight: bolder;
-}
-.app-subtitle{
-  text-align: center;
-  margin-top: -10px;
-}
+
 
 .badge-container{
   text-align: center;
@@ -144,4 +130,28 @@ body {
 }
 .full-width{
   width: 100%;
+}
+.center-block{
+  margin: 0 auto;
+  margin-top: 16px;
+  display: block;
+}
+
+md-card{
+  margin: 16px auto;
+  min-width: 260px;
+  max-width: 400px;
+  md-card-title, md-card-subtitle{
+    font-family: 'Roboto', sans-serif;
+    margin-right: 5px;
+  }
+}
+p{
+  font-family: 'Roboto', sans-serif;
+}
+.message-success{
+  height: 32px;
+  line-height: 32px;
+  background-color: rgba(100,175,50,0.45);
+  border-radius: 3px;
 }
