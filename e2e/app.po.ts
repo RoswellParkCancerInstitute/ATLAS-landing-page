@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class AppinstallendpointPage {
+export class AtlasLandingPagePage {
   navigateTo() {
     return browser.get('/');
   }

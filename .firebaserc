@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "appinstallendpoint"
+    "default": "appinstallendpoint",
+    "dist": "appinstallendpoint"
   }
 }

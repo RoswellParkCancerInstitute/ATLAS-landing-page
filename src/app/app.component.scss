@@ -1,157 +1,18 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-body {
-  padding: 0;
-  font-family: Arial;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  margin-bottom: 10px;
-}
-/* Make the masthead heading the same height as the navigation */
-.header h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 40px;
-  padding-bottom: 19px;
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
-
-.container-narrow > hr {
-  margin: 30px 0;
-}
-
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  /*border-bottom: 1px solid #e5e5e5;*/
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
-
-.col-centered{
-    margin: 0 auto;
-    float: none;
-}
-
-.rpci-logo{
-  /*margin-top: 5em;*/
-  margin-bottom: 1em;
-  width: 175px;
-}
-
-.app-logo{
-  width: 100px;
-  height: 100px;
-}
-
-
-.badge-container{
-  text-align: center;
-  margin: 0 auto;
-  padding: 0;
-  margin-top: 2em;
-}
-.badge-ios{
-  display:inline-block;
-  overflow:hidden;
-  background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;
-  width:165px;
-  height:40px;
-  background-size: contain;
-  background-position: center;
-}
-.badge-ios-disabled{
-  opacity: 0.5;
-}
-
-.badge-android{
-  display:inline-block;
-  overflow:hidden;
-  background: url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-  width:165px;
-  height:40px;
-}
-.full-width{
+.app-container {
+  max-width: 500px;
+  min-width: 300px;
+  margin: 8px auto;
   width: 100%;
-}
-.center-block{
-  margin: 0 auto;
-  margin-top: 16px;
-  display: block;
-}
-
-md-card{
-  margin: 16px auto;
-  min-width: 260px;
-  max-width: 400px;
-  md-card-title, md-card-subtitle{
-    font-family: 'Roboto', sans-serif;
-    margin-right: 5px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  box-sizing: border-box;
+  .atlas-logo {
+    width: 100%;
+    margin: 0 auto;
   }
-}
-p{
-  font-family: 'Roboto', sans-serif;
-}
-.message-success{
-  height: 32px;
-  line-height: 32px;
-  background-color: rgba(100,175,50,0.45);
-  border-radius: 3px;
+  .rpci-logo {
+    width: 200px;
+    margin: 8px auto;
+  }
 }

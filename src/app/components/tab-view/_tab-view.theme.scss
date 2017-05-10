@@ -1,0 +1,15 @@
+@import '~@angular/material/theming';
+@mixin tab-view-theme($theme){
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent); // Use mat-color to extract individual colors from a palette as necessary.
+//   .tab-group {
+//     color: white;
+//     opacity: 1;
+//   }
+  .mat-tab-label{
+      color:white;
+      font-weight: 400 !important;
+      font-size: 15px !important;
+      opacity: 0.9 !important;
+  }
+}

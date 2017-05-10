@@ -1,10 +1,10 @@
-import { AppinstallendpointPage } from './app.po';
+import { AtlasLandingPagePage } from './app.po';
 
-describe('appinstallendpoint App', function() {
-  let page: AppinstallendpointPage;
+describe('atlas-landing-page App', () => {
+  let page: AtlasLandingPagePage;
 
   beforeEach(() => {
-    page = new AppinstallendpointPage();
+    page = new AtlasLandingPagePage();
   });
 
   it('should display message saying app works', () => {
