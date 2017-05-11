@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+// import { Location } from '@angular/common';
 import { ListItem, ListItemTypes } from 'app/types';
 @Component({
   selector: 'app-tab-view',
@@ -63,7 +64,9 @@ export class TabViewComponent {
       type: ListItemTypes.ScoreSheet,
       disabled: false,
       links: {
-        file: '../assets/surgical-scoring-systems/CASE.pdf'
+        // file: '../assets/surgical-scoring-systems/CASE.pdf',
+        file: 'gs://appinstallendpoint.appspot.com/RACE.pdf',
+        download_url: 'https://firebasestorage.googleapis.com/v0/b/appinstallendpoint.appspot.com/o/CASE.pdf?alt=media'
       }
     },
     {
@@ -73,7 +76,8 @@ export class TabViewComponent {
       type: ListItemTypes.ScoreSheet,
       disabled: false,
       links: {
-        file: './assets/surgical-scoring-systems/PACE.pdf'
+        file: './assets/surgical-scoring-systems/PACE.pdf',
+        download_url: 'https://firebasestorage.googleapis.com/v0/b/appinstallendpoint.appspot.com/o/PACE.pdf?alt=media'
       }
     },
     {
@@ -83,7 +87,8 @@ export class TabViewComponent {
       type: ListItemTypes.ScoreSheet,
       disabled: false,
       links: {
-        file: '../../assets/surgical-scoring-systems/PLACE.pdf'
+        file: '../../assets/surgical-scoring-systems/PLACE.pdf',
+        download_url: 'https://firebasestorage.googleapis.com/v0/b/appinstallendpoint.appspot.com/o/PLACE.pdf?alt=media'
       }
     },
     {
@@ -93,7 +98,8 @@ export class TabViewComponent {
       type: ListItemTypes.ScoreSheet,
       disabled: false,
       links: {
-        file: '../assets/surgical-scoring-systems/RACE.pdf'
+        file: '../assets/surgical-scoring-systems/RACE.pdf',
+        download_url: 'https://firebasestorage.googleapis.com/v0/b/appinstallendpoint.appspot.com/o/RACE.pdf?alt=media'
       }
     },
     {
@@ -103,7 +109,8 @@ export class TabViewComponent {
       type: ListItemTypes.ScoreSheet,
       disabled: true,
       links: {
-        file: ''
+        file: '',
+        download_url: ''
       }
     }
   ];
@@ -122,4 +129,24 @@ export class TabViewComponent {
   //   const currentFilters = this.tabs.filter(item => item.selected).map(item => item.type);
   //   this.filteredItems = this.items.filter((item: ListItem) => (currentFilters.indexOf(item.type) >= 0));
   // }
+
+  openEmail(item: ListItem) {
+    const newLine = '\n';
+    const subject = `${item.name} : Surgery Scoring Sheet : ATLAS`;
+    const body = `Hello,` + newLine + newLine +
+      `You can download the ${item.name} Score Sheet using the download link below:` + newLine +
+      `${item.links.download_url}` + newLine +
+      `If the above link doesn't work, please copy and paste it in your browser.` + newLine + newLine +
+      `Thank You,` + newLine +
+      `The ATLAS Program` + newLine +
+      `Roswell Park Cancer Institute`;
+
+    const str = `?subject=${subject}&body=${body} `;
+    let formatted = encodeURI(str);
+    formatted = 'mailto:' + formatted;
+    console.log(str, formatted);
+    // Change location to mailto: so it will open the default mail app
+    window.location.href = formatted;
+    return formatted;
+  }
 }

@@ -20,10 +20,19 @@
           </a>
         </md-card-actions>
         <md-card-actions *ngIf="item.type===itemTypes.ScoreSheet">
-          <a md-raised-button [href]="item.links.file" [download]="item.name+'_ScoreSheet.pdf'" [disabled]="item.disabled" color="primary">
+          <a md-raised-button [href]="item.links.download_url" [download]="item.name+'_ScoreSheet.pdf'" [disabled]="item.disabled" color="primary">
             <md-icon>file_download</md-icon>
             <span>DOWNLOAD</span>
           </a>
+          
+          <button md-button (click)="openEmail(item)" color="light" [disabled]="item.disabled">
+            <md-icon>email</md-icon>
+            EMAIL
+          </button>
+          <!--<a md-button [href]="getMailtoString(item)" color="light">
+            <md-icon>email</md-icon>
+            EMAIL
+          </a>-->
         </md-card-actions>
         <md-card-actions *ngIf="item.type===itemTypes.WebApp">
           <a md-raised-button [href]="item.links.url" color="primary">Go To Page</a>

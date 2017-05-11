@@ -10,6 +10,7 @@ export interface ListItem {
         ios?: string;
         android?: string;
         file?: string;
+        download_url?:string;
         url?: string;
     };
 }
