@@ -134,7 +134,7 @@ export class TabViewComponent {
     const newLine = '\n';
     const subject = `${item.name} : Surgery Scoring Sheet : ATLAS`;
     const body = `Hello,` + newLine + newLine +
-      `You can download the ${item.name} Score Sheet using the download link below:` + newLine +
+      `You can download the ${item.name} Score Sheet using the link below:` + newLine +
       `${item.links.download_url}` + newLine +
       `If the above link doesn't work, please copy and paste it in your browser.` + newLine + newLine +
       `Thank You,` + newLine +
