@@ -5,11 +5,11 @@
     <mat-card-subtitle class="description">By {{item.author}}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-actions>
-    <a [href]="item.links?.amazon" mat-raised-button color="primary" target="_blank" *ngIf="item.links?.amazon">
+    <a [href]="item.links?.amazon" mat-raised-button color="primary" target="_blank" *ngIf="item.links?.amazon" (click)="trackOnClick(item, 'amazon')">
       <mat-icon>shopping_cart</mat-icon>
       Get on Amazon
     </a>
-    <a [href]="item.links?.pdf" mat-button target="_blank" *ngIf="item.links?.pdf">
+    <a [href]="item.links?.pdf" mat-button target="_blank" *ngIf="item.links?.pdf" (click)="trackOnClick(item, 'file')">
       <mat-icon>file_download</mat-icon>
       Download PDF
     </a>

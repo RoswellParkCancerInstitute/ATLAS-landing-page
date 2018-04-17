@@ -33,4 +33,13 @@ export class TabAppsComponent implements OnInit {
   ngOnInit() {
   }
 
+  trackOnClick(item, platform: string) {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'App Store Button',
+      eventLabel: platform,
+      eventAction: 'click',
+      eventValue: 1
+    });
+  }
+
 }

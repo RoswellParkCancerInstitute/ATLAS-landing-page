@@ -13,4 +13,12 @@ export class SocialToolbarComponent implements OnInit {
   ngOnInit() {
   }
 
+  trackOnClick(item) {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Social Button',
+      eventLabel: item.name,
+      eventAction: 'click',
+      eventValue: 1
+    });
+  }
 }

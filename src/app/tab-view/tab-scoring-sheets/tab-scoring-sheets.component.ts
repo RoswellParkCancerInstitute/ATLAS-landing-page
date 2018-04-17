@@ -63,6 +63,13 @@ export class TabScoringSheetsComponent implements OnInit {
   ngOnInit() {
   }
   openEmail(item: any) {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'File Email',
+      eventLabel: item.name,
+      eventAction: 'download',
+      eventValue: 1
+    });
+
     const newLine = '\n';
     const subject = `${item.name} : Surgery Scoring Sheet : ATLAS`;
     const body = `Hello,` + newLine + newLine +
@@ -80,6 +87,21 @@ export class TabScoringSheetsComponent implements OnInit {
     // Change location to mailto: so it will open the default mail app
     window.location.href = formatted;
     return formatted;
+  }
+
+  trackOnClick(item) {
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'Scoring Sheet Button',
+      eventLabel: item.name,
+      eventAction: 'click',
+      eventValue: 1
+    });
+    (<any>window).ga('send', 'event', {
+      eventCategory: 'File Download',
+      eventLabel: item.name,
+      eventAction: 'download',
+      eventValue: 1
+    });
   }
 
 }
