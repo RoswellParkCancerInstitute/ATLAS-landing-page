@@ -23,11 +23,26 @@ $theme: mat-light-theme($primary, $accent, $warn);
 body {
   background-color: #4682B4;
 }
-.mat-tab-label-content{
-  font-size: 1.1em;
-  color: white;
-  display: flex;
-  align-items: center;
+
+
+
+// Overwrite for Angular Material Tabs CSS
+.mat-tab-label-container {
+  .mat-tab-label  {
+      opacity: 1;
+      padding: 0;
+      // font-size: 1.1em;
+      // color: white;
+      .mat-tab-link{
+        font-size: 1.1em;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+  }
 }
-
-
+.mat-tab-links {
+   >.mat-ink-bar {
+        display: none;
+    }
+}

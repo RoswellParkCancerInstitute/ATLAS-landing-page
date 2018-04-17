@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TabBooksComponent } from './tab-books.component';
 
 const routes: Routes = [{
-  path: 'apps',
+  path: '',
   component: TabBooksComponent
 }];
 

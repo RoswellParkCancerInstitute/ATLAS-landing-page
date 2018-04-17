@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { TabScoringSheetsComponent } from './tab-scoring-sheets.component';
 
 const routes: Routes = [{
-  path: 'scoring-sheets',
+  path: '',
   component: TabScoringSheetsComponent
 }];
 
