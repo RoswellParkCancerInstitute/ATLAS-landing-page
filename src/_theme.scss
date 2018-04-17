@@ -5,10 +5,6 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
-
-
-@import 'src/app/components/tab-view/tab-view.theme';
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
@@ -24,9 +20,14 @@ $theme: mat-light-theme($primary, $accent, $warn);
 // that you are using.
 @include angular-material-theme($theme);
 @include mat-core();
-@include tab-view-theme($theme);
 body {
   background-color: #4682B4;
+}
+.mat-tab-label-content{
+  font-size: 1.1em;
+  color: white;
+  display: flex;
+  align-items: center;
 }
 
 

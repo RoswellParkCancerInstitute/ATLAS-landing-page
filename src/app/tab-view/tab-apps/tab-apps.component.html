@@ -1,0 +1,15 @@
+<mat-card *ngFor="let item of items" class="card card-app">
+    <mat-card-header>
+        <img [src]="item.icon" mat-card-avatar />
+        <mat-card-title class="title">{{item.name}}</mat-card-title>
+        <mat-card-subtitle class="description">{{item.description}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <a [href]="item.links.ios" mat-button target="_blank" class="store-badge ios">
+          <img src="../assets/app-store-badges/ios.svg" />
+        </a>
+        <a [href]="item.links.android" mat-button target="_blank" class="store-badge android">
+          <img src="../assets/app-store-badges/android.png" />
+        </a>
+      </mat-card-actions>
+</mat-card>

@@ -1,0 +1,29 @@
+// app-tab-view {
+//   mat-tab-group {
+//     background-color: red;
+//   }
+//   background-color: red;
+// }
+.tabs-container {
+  min-height: 800px;
+  overflow: hidden;
+
+  .mat-card{
+    background-color: red;
+    width: auto;
+    margin: 16px;
+    display: block;
+    position: relative;
+  }
+  // .mat-tab-header{
+
+  // }
+}
+.mat-tab-label-content{
+  font-size: 2em;
+  color: red !important;
+  display: flex;
+  align-items: center;
+}
+
+

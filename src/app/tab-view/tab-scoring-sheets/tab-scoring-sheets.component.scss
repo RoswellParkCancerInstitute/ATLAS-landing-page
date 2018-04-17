@@ -1,0 +1,20 @@
+.card{
+  width: auto;
+  margin: 16px;
+  display: block;
+  position: relative;
+  mat-card-header {
+    .mat-card-avatar {
+      height: 80px;
+      width: 80px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .title {
+      font-size: 1.25em;
+    }
+    .description {
+      font-size: 0.8em;
+    }
+  }
+}
