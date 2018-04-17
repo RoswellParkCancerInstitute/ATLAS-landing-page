@@ -1,0 +1,6 @@
+<div class="social-toolbar">
+  <p class="social-label">{{label}}</p>
+  <a mat-icon-button class="social-button" *ngFor="let item of items" [href]="item.targetUrl" target="_blank">
+    <img mat-icon class="social-icon" [src]="item.iconUrl" />
+  </a>
+</div>

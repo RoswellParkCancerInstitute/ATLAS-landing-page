@@ -9,10 +9,12 @@ import { AppComponent } from './app.component';
 import { AppMaterialModulesModule } from './app-material-modules/app-material-modules.module';
 import { TabViewModule } from './tab-view/tab-view.module';
 import { AppRoutingModule } from './app-routing.module';
+import { SocialToolbarComponent } from './social-toolbar/social-toolbar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SocialToolbarComponent
   ],
   imports: [
     BrowserModule,

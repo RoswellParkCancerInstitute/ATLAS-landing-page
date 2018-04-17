@@ -1,5 +1,7 @@
 <div class="app-container">
   <img class="atlas-logo" src="../assets/logos/atlas.png" />
   <router-outlet></router-outlet>
+  <app-social-toolbar [label]="'Follow us on'" [items]="socialAtlas"></app-social-toolbar>
+  <app-social-toolbar [label]="'Follow Roswell Park Urology on'" [items]="socialUrology"></app-social-toolbar>
   <img class="roswell-logo" src="../assets/logos/roswell.png" />
 </div>
